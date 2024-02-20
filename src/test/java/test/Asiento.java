@@ -4,10 +4,15 @@ public class Asiento {
     String color;
     int precio;
     int registro;
-    String [] colores = {"rojo", "verde", "amarillo", "negro" , "blanco"};
 
-    public void cambiarColor(String color){
-        
-
+    public void cambiarColor(String nuevoColor) {
+        String[] colores = {"verde", "amarillo", "blanco", "negro", "rojo"};
+        for (String color : colores) {
+            if (nuevoColor.equals(color)) {
+                this.color = nuevoColor;
+                break;
+            }
+        }   
     }
+        
 }
